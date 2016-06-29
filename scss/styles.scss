@@ -1,0 +1,28 @@
+$primary: #fffcf2; //light peach
+$secondary: #8f6b00; //dark orange/brown
+$link: #f6b900; // orange
+$highlight: #ffd044; //light orange
+//other colors that might go well as attention getting highlights:
+// RED: fc434c, f2000c, 8c0007
+// BLUE: 4a4ac6, 0101ac, 070764
+// GREEN: 4add3b, 13ca00, 0b7500
+//http://paletton.com/#uid=71b1C0knvDc1Ez00c+rLohX+auV
+body {
+  background-color: $primary;
+  color: $secondary;
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  color: $highlight;
+  text-align: center;
+}
+
+nav li{
+  display: inline-block;
+}
+a {
+  color: $link;
+  font-size: 1.2em;
+}
