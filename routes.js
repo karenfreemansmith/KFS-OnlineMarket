@@ -2,102 +2,124 @@ var views = require("./views.js");
 var html='"Content-Type": "text/html"';
 
 
-function front(request, response) {
+function index(request, response) {
   if(request.url === "/") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("front", {}, response);
+    views.view("index", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function job(request, response) {
-  if(request.url === "/job") {
+function account(request, response) {
+  if(request.url === "/account") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("job", {}, response);
+    views.view("account", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function jobs(request, response) {
-  if(request.url === "/jobs") {
+function browse(request, response) {
+  if(request.url === "/browse") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("jobs", {}, response);
+    views.view("browse", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function profile(request, response) {
-  if(request.url === "/profile") {
+function cart(request, response) {
+  if(request.url === "/cart") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("profile", {}, response);
+    views.view("cart", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function profiles(request, response) {
-  if(request.url === "/profiles") {
+function categories(request, response) {
+  if(request.url === "/admin/categories") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("profiles", {}, response);
+    views.view("categories", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function employers(request, response) {
-  if(request.url === "/employers") {
+function checkout(request, response) {
+  if(request.url === "/checkout") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("employers", {}, response);
+    views.view("checkout", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function applicants(request, response) {
-  if(request.url === "/applicants") {
+function product(request, response) {
+  if(request.url === "/product") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("applicants", {}, response);
+    views.view("product", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function company(request, response) {
-  if(request.url === "/company") {
+function products(request, response) {
+  if(request.url === "/admin/products") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("company", {}, response);
+    views.view("products", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-function cover(request, response) {
-  if(request.url === "/application") {
+function reports(request, response) {
+  if(request.url === "/admin/reports") {
     response.writeHeader(200, {html});
     views.view("header", {stylesheet:"css/styles.css"}, response);
-    views.view("cover", {}, response);
+    views.view("reports", {}, response);
     views.view("footer", {}, response);
     response.end();
   }
 }
 
-module.exports.front = front;
-module.exports.job = job;
-module.exports.jobs = jobs;
-module.exports.profile = profile;
-module.exports.profiles = profiles;
-module.exports.applicants = applicants;
-module.exports.employers = employers;
-module.exports.company = company;
-module.exports.cover = cover;
+function search(request, response) {
+  if(request.url === "/search") {
+    response.writeHeader(200, {html});
+    views.view("header", {stylesheet:"css/styles.css"}, response);
+    views.view("search", {}, response);
+    views.view("footer", {}, response);
+    response.end();
+  }
+}
+
+function settings(request, response) {
+  if(request.url === "/admin/settings") {
+    response.writeHeader(200, {html});
+    views.view("header", {stylesheet:"css/styles.css"}, response);
+    views.view("settings", {}, response);
+    views.view("footer", {}, response);
+    response.end();
+  }
+}
+
+module.exports.index = index;
+module.exports.account = account;
+module.exports.browse = browse;
+module.exports.cart = cart;
+module.exports.categories = categories;
+module.exports.checkout = checkout;
+module.exports.product = product;
+module.exports.products = products;
+module.exports.reports = reports;
+module.exports.search = search;
+module.exports.settings = settings;

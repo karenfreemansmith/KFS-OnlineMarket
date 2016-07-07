@@ -8,7 +8,8 @@ $black: #111;
 
 body {
   background-color: $primary;
-  background-image: url("../img/bg.png");
+  // removed bacground image because it hangs ip server...*/
+  // background-image: url("../img/bg.png"); */
   background-repeat: repeat-x;
   background-position: bottom;
   padding-top: 70px;
