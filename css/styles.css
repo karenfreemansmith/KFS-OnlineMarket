@@ -1,6 +1,6 @@
 body {
   background-color: #7109AA;
-  background-image: url("../img/bg.png");
+  /* removed bacground image because it hangs ip server...*/
   background-repeat: repeat-x;
   background-position: bottom;
   padding-top: 70px;
