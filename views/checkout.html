@@ -1,6 +1,60 @@
-  <h2>Complete Order</h2>
-  <p>Shows final order with total/shipping/tax etc.</p>
-  <p>Shows customer information and allows editing if needed (or request if missing). Also prompts new customers to create account/sign in if not data available.</p>
-  <p>Checks payment method (probably does not store credit card info as rules are so strict, but uses payment service)</p>
-  <p>On valid payment displays a confirmation and shipping estimate/tracking link</p>
-  <p>Confirmation is saved for all orders so customer can "check order" or have information about returns/disputes from their account</p>
+  <div class="row" id="verify">
+    <h2>Complete Order</h2>
+    <div class="col-sm-4">
+      <h3>Your Order</h3>
+      <p>Product Name</a> $Price Quantity: 2  $Total</p>
+      <p>Product Name</a> $Price Quantity: 2  $Total</p>
+      <p>Additional Charges:</p>
+      <p>Shipping: $0.00</p>
+      <p>State Sales Tax: $0.00</p>
+      <p>Other Fees: $0.00</p>
+      <p>Order Total</p>
+      <p><a href="/cart">Back to Cart</a></p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Verify Shipping Address</h3>
+      Customer Name<br>
+      Customer Street<br>
+      Customer City/State/Zip</br>
+      <p><a href="/account">Edit Shipping Details</a></p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Verify Payment Method</h3>
+      Pay with ----<br>
+      Billing Address</br>
+      Billing City/State/Zip</br>
+      <p><a href="/account">Edit Payment Details</a></p>
+      <button id="order">Verify Order/Charge Credit Card Now</button>
+    </div>
+  </div>
+  <div class="row" id="confirm">
+    <h2>Order Confirmation</h2>
+    <div class="col-sm-4">
+      <h3>Your Order</h3>
+      <p>Product Name</a> $Price Quantity: 2  $Total</p>
+      <p>Product Name</a> $Price Quantity: 2  $Total</p>
+      <p>Additional Charges:</p>
+      <p>Shipping: $0.00</p>
+      <p>State Sales Tax: $0.00</p>
+      <p>Other Fees: $0.00</p>
+      <p>Order Total</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Delivery to expected on (DATE)</h3>
+      Customer Name<br>
+      Customer Street<br>
+      Customer City/State/Zip</br>
+    </div>
+    <div class="col-sm-4">
+      <p><a href="#">Track Order</a> (Or shows delivery date if delivered)</p>
+      <p><a href="#">Post a Review of this Product</a> |
+      <a href="#">Request Customer Service for this order</a></p>
+    </div>
+  </div>
+  <script>
+  $("#confirm").hide();
+  $("#order").click(function() {
+    $("#verify").toggle();
+    $("#confirm").toggle();
+  });
+  </script>

@@ -1,0 +1,50 @@
+    <div class="row" id="login">
+      <div class="col-xs-6 applicant">
+        <div>
+          <h2>Customer Login</h2>
+          <button id="cLogin">Login</button>
+        </div>
+      </div>
+      <div class="col-xs-6 employer">
+        <div>
+          <h2>Administrator Login</h2>
+          <button id="aLogin">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="logout">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+        <h2>Logout</h2>
+        <button id="logoutAll">Logout</button>
+      </div>
+      <div class="col-xs-4"></div>
+    </div>
+
+    <script>
+    showPage();
+
+    function showPage() {
+      if(localStorage['customer']==="true" || localStorage['admin']==="true") {
+        $("#logout").show();
+        $("#login").hide();
+      } else {
+        $("#logout").hide();
+        $("#login").show();
+      }
+    }
+
+    $("#logoutAll").click(function() {
+      localStorage['customer']="false";
+      localStorage['admin']="false";
+      location.reload();
+    });
+    $("#cLogin").click(function() {
+      localStorage['customer']="true";
+      location.reload();
+    });
+    $("#aLogin").click(function() {
+      localStorage['admin']="true";
+      location.reload();
+    });
+    </script>

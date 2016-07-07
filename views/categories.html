@@ -1,4 +1,29 @@
   <h2>Manage Categories</h2>
-  <p>List of all categories (shown as tree with sub-categories if they exist)</p>
-  <p>Links to add new category - or edit/delete(hide) existing category.</p>
-  <p>A category with products can't be deleted.</p>
+
+  <ul>
+    <li>Category 1 (<a href="#">Edit</a>/<a href="#">Delete</a>)
+      <ul>
+        <li>Sub-Category A (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+      </ul>
+    </li>
+    <li>Category 2 (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+    <li>Category 3 (<a href="#">Edit</a>/<a href="#">Delete</a>)
+      <ul>
+        <li>Sub-Category A (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+        <li>Sub-Category B (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+        <li>Sub-Category C (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+        <li>Sub-Category D (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+      </ul>
+    </li>
+    <li>Category 4 (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+    <li>Category 5 (<a href="#">Edit</a>/<a href="#">Delete</a>)</li>
+  </ul>
+  <h3>Add Category</h3>
+  <label>Name: </label> <input type="text"> <label>Parent Category: </label>
+  <select>
+    <option>(none)</option>
+    <option>...one for each existing category</option>
+  </select> <button> Add </button>
+
+
+  <p><em>A category with products can't be deleted.</em></p>

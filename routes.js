@@ -22,6 +22,16 @@ function account(request, response) {
   }
 }
 
+function admin(request, response) {
+  if(request.url === "/admin") {
+    response.writeHeader(200, {html});
+    views.view("header", {stylesheet:"css/styles.css"}, response);
+    views.view("admin", {}, response);
+    views.view("footer", {}, response);
+    response.end();
+  }
+}
+
 function browse(request, response) {
   if(request.url === "/browse") {
     response.writeHeader(200, {html});
@@ -114,6 +124,7 @@ function settings(request, response) {
 
 module.exports.index = index;
 module.exports.account = account;
+module.exports.admin = admin;
 module.exports.browse = browse;
 module.exports.cart = cart;
 module.exports.categories = categories;

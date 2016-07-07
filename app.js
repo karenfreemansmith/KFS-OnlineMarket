@@ -4,6 +4,7 @@ var route = require("./routes.js");
 server.createServer(function (request, response) {
   route.index(request, response);
   route.account(request, response);
+  route.admin(request, response);
   route.browse(request, response);
   route.cart(request, response);
   route.categories(request, response);
