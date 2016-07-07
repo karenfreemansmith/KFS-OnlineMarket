@@ -1,28 +1,41 @@
-$primary: #fffcf2; //light peach
-$secondary: #8f6b00; //dark orange/brown
-$link: #f6b900; // orange
-$highlight: #ffd044; //light orange
-//other colors that might go well as attention getting highlights:
-// RED: fc434c, f2000c, 8c0007
-// BLUE: 4a4ac6, 0101ac, 070764
-// GREEN: 4add3b, 13ca00, 0b7500
-//http://paletton.com/#uid=71b1C0knvDc1Ez00c+rLohX+auV
+$primary: #7109AA;
+$link1: #FFFF00;
+$link2: #9FEE00;
+$secondary: #CD0074;
+$highlight: #FF7400;
+$white: #fff;
+$black: #111;
+
 body {
   background-color: $primary;
-  color: $secondary;
-  width: 70%;
-  margin: auto;
+  background-image: url("../img/bg.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-top: 70px;
+  padding-bottom: 130px;
+  color: $black;
+}
+
+nav {
+  background-color: $secondary;
+}
+
+.container {
+  background-color: $white;
+  border-radius: 10px;
 }
 
 h1 {
-  color: $highlight;
+  color: $secondary;
   text-align: center;
 }
 
-nav li{
-  display: inline-block;
+li.nav-item a:hover, dropdown:hover, a.dropdown-toggle:hover {
+  color: $primary;
+  background-color: $secondary;
 }
-a {
-  color: $link;
+a, a.dropdown-toggle, a.dropdown-toggle:active {
+  color: $link1;
+  background-color: $secondary;
   font-size: 1.2em;
 }
